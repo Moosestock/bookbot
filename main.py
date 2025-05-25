@@ -1,6 +1,12 @@
 def main():
+
+	import sys
+
+	from stats import getBookName
+	bookName = getBookName(sys.argv)
+
 	from stats import getBookText
-	bookText = getBookText("books/frankenstein.txt")
+	bookText = getBookText(bookName)
 
 	from stats import getBookWordCount
 	splitBookWords = getBookWordCount(bookText)

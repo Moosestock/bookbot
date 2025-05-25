@@ -1,3 +1,14 @@
+def getBookName(sysArgv):
+	import sys
+#	print(sys.argv[0])
+	try:
+		bookName = sys.argv[1]
+	except IndexError:
+		print("Usage: python3 main.py <path_to_book>")
+		sys.exit(1)
+
+	return bookName
+
 def getBookText(bookName):
 	with open(bookName) as f:
 		bookText = f.read()
